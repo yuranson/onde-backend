@@ -2,12 +2,13 @@ const Database = require('better-sqlite3');
 const path = require('path');
 
 // Caminho absoluto para o arquivo SQLite
-const dbPath = path.join(__dirname, 'db.sqlite');
+const dbPath = path.join(__dirname, 'onde.db');
+
 
 let db;
 
 try {
-  db = new Database(dbPath);
+  db = new  Database('dbPath');
   console.log('✅ Conectado ao banco de dados:', dbPath);
 } catch (err) {
   console.error('❌ Erro ao conectar ao banco de dados:', err.message);
